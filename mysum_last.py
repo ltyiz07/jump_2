@@ -14,8 +14,12 @@ for i in range(len(temp)):
         sub_list.append(temp[i-1])
         sub_list.append(temp[i])
         data.append(sub_list)
-    print(sub_list)
 
 print(data)
 
-
+word = ""
+num = 0
+for i in data:
+    if i[0] == 'a':
+        print("중복입니다.")
+        print(i[0], i[1])
