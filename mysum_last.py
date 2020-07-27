@@ -2,7 +2,20 @@
 #콘솔에서
 #import "파일명"
 #ex200727.source
+#리스트 2차원으로 사용
 
 source = "a,1,b,2,c,3,a,1,d,2,c,3"
-s = source
-print(s)
+temp = source.split(",")
+data = []
+
+for i in range(len(temp)):
+    sub_list = []
+    if i%2 == 1:
+        sub_list.append(temp[i-1])
+        sub_list.append(temp[i])
+        data.append(sub_list)
+    print(sub_list)
+
+print(data)
+
+
