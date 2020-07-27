@@ -14,7 +14,7 @@ for i in data:
     print(word_in)
     if i == ',':
         if index % 2 == 0:
-            if word_in.find(","+word",") < 0:
+            if word_in.find("," + word + ",") < 0:
                 word_in = word_in + word
         index = index + 1
         word = ""
