@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 source = "a,1,b,1,c,1,a,1,d,1,f,1,c,1,b,3,d,2,d,1"
-=======
-source = "a,1,b,1,c,1,a,1,d,1,f,1,c,1"
->>>>>>> 9d9697ef4f6f53843475f5e1253006e5f41fd1a1
+
+
 # data = [['a',1],['b',1],['c',1],['a',1],['d',1],['f',1],['c',1]]
 temp = source.split(',')
 # temp = ['a','1' ... 'c','1']
@@ -39,12 +37,5 @@ for j in range(len(data)):
     else:
         data2.append(data[j])
 
-<<<<<<< HEAD
-print(data2)
-=======
-print(data2)
 
-
-#1번을 받아들인다
-#ㅡ렇ㄷ;ㅣㅏㅓㅁ;ㅣ나얼
->>>>>>> 9d9697ef4f6f53843475f5e1253006e5f41fd1a1
+print(data2)
