@@ -6,10 +6,11 @@ count = 0
 words = "20010131Rainy", "179Rai354ny", "21R354yn76"
 
 
-in_words = ["1", "2", "3", "4", "5", "6", "7"]
+in_words = ["1", "2", "3"
+            ]
 
-for i in range(7):
-    in_words[i] = input("press any key: ")
+for i in range(3):
+    in_words[i] = input("%d press any key:" % i)
 
 R_count = 0
 
