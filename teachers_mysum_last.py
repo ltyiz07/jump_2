@@ -11,7 +11,7 @@ for i in temp:
     print(i)
 # 인덱스 번호를 i에 담는다
 for i in range(len(temp)):
-    if i%2 == 1:
+    if i % 2 == 1:
         print(i, [temp[i-1], int(temp[i])])
         data.append([temp[i-1], int(temp[i])])
 
@@ -32,8 +32,8 @@ for j in range(len(data)):
             no_dupl = k
     if is_dupl:
         print("중복입니다.")
-        sum = data[j][1] + data2[no_dupl][1]
-        data2[no_dupl][1] = sum
+        sum_1 = data[j][1] + data2[no_dupl][1]
+        data2[no_dupl][1] = sum_1
     else:
         data2.append(data[j])
 
