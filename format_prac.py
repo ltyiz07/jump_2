@@ -9,7 +9,7 @@ day = 16
 
 # 모든 수에대한 큰이미지 수 지정
 num0 = "{0:#^5}\n".format("") + "{0:5}\n".format("#   #")\
-       +  "{0:5}\n".format("#   #") + "{0:5}\n".format("#   #") + "{0:#^5}\n".format("")
+       + "{0:5}\n".format("#   #") + "{0:5}\n".format("#   #") + "{0:#^5}\n".format("")
 print(num0)
 num1 = "{0:5}\n".format("    #") + "{0:5}\n".format("    #")\
        + "{0:5}\n".format("    #") + "{0:5}\n".format("    #") + "{0:5}\n".format("    #")
@@ -74,6 +74,10 @@ data = "{0:#^5}\n".format("    #") + "{0:#^5}\n".format("   # ")\
        + "{0:#^5}\n".format("  #  ") + "{0:#^5}\n".format(" #   ") + "{0:#^5}\n".format("#    ") + '\n'
 f.write(data)
 
+print("=" * 100)
+print(type(f))
+print(type(10))
+print("=" * 100)
 # day printing
 
 # over 29 days
