@@ -1,3 +1,10 @@
+import feature_1.fruite
+
+
+special_a = feature_1.fruite.listing("a,b,c,d,e,f")
+print(special_a)
+
+
 sum = None
 
 
