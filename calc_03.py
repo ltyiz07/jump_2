@@ -1,8 +1,9 @@
 import feature_1.fruite
 
 
-special_a = feature_1.fruite.listing("a,b,c,d,e,f")
+special_a = feature_1.fruite.file_finder("D:/leety")
 print(special_a)
+
 
 
 sum = None

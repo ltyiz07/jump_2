@@ -1,0 +1,9 @@
+   seed    : 13 
+  apple    :  5 
+  peach    : 20 
+  melon    :  1 
+  tomato   :  5 
+  banana   :  1 
+  grape    : 10 
+watermelon :  3 
+  mango    :  2 

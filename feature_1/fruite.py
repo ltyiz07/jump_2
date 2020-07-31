@@ -42,27 +42,36 @@ def adding(sorted_data):
     return data3
 
 
-all_data = ""
-with os.scandir("D:\\leety\\Desktop\\trials\\sales") as entries:
-    for entry in entries:
-        person, sale_data = read_data("D:\\leety\\Desktop\\trials\\sales\\{0}".format(entry.name))
-        print(sale_data)
-        all_data = all_data + sale_data + ","       # 여기서 문자열 마지막에 불필요한 ',' 발생
-print("all_data:", all_data)
+def file_finder(directory):
+    import os
+    folder_list = []
+    with os.scandir(directory) as folders:
+        for folder in folders:
+            folder_list.append(folder.name)
+            print(folder.name)
+
 
 if __name__ == "__main__":          # 더 알아보기
+
+    all_data = ""
+    with os.scandir("..\\sales") as entries:            # 디렉토리 리스트 가져오기
+        for entry in entries:
+            person, sale_data = read_data("..\\sales\\{0}".format(entry.name))
+            print(sale_data)
+            all_data = all_data + sale_data + ","  # 여기서 문자열 마지막에 불필요한 ',' 발생
+    print("all_data:", all_data)
+
     listed_data = listing(all_data)   # 리스트로 변환하는 함수 사용
     listed_data[0].pop()            # 문자열 더하는 과정에서 생긴 코마 없애기 위해 필요...
     show_data = adding(sorting(listed_data))            # 함수들 한번에 사용...
     print(show_data)            # 확인해보기
 
-
-    with open("D:\\leety\\Desktop\\trials\\sales.txt", 'w') as f1:
+    with open("..\\total_sales.txt", 'w') as f1:
         count = 0
         for i in show_data:
             a = show_data[count][0]
             b = show_data[count][1]
-            show = "{0:<10} : {1} \n".format(a, b)
+            show = "{0:^10} : {1:>2} \n".format(a, b)
             f1.write(show)
             count += 1
 
@@ -70,7 +79,6 @@ if __name__ == "__main__":          # 더 알아보기
 # import feature_1.fruite
 #
 # feature_1.fruite.adding
-#
 #
 # from feature_1.fruite import adding
 # 로 프로젝트 내의 다른 파일에서도 불러올 수 있음

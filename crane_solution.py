@@ -1,49 +1,40 @@
 def solution(board, moves):
     answer = 0
     keeping_box = []
+    count = 0
     for m in moves:
         for j in range(len(board)):
             if not board[j][m - 1] == 0:
-                keeping_box.append(board[j][m - 1])
+                picked = board[j][m - 1]
                 board[j][m - 1] = 0
+                if count > 0:
+                    if keeping_box[count - 1] == picked:
+                        keeping_box.pop()
+                        count -= 1
+                        answer += 2
+                    else:
+                        keeping_box.append(picked)
+                        count += 1
+                else:
+                    keeping_box.append(picked)
+                    count += 1
                 break
-            else:
-                pass
-    print(keeping_box)
-
-
-
-
-
-
-    # count += 0
-    # while count == 0 or :
-    #     if keeping_box[i] == keeping_box[i - 1] and i > 0:
-    #         del keeping_box[i-1:i+1]
-    #         count += 1
-    #         break
-    count = 0
-    lenth = 0
-    while len(keeping_box) != lenth or count == 0:
-        for i in range(len(keeping_box)):
-            lenth = len(keeping_box)
-            if keeping_box[i] == keeping_box[i - 1] and i > 0:
-                count += 1
-                del keeping_box[i-1:i+1]
-                break
-
-    answer = count * 2
-    print(answer)
+    print(keeping_box, count)
 
     return answer
-
-
-
-solution([[0, 0, 0, 0, 0], [0, 0, 1, 0, 3], [0, 2, 5, 0, 1], [4, 2, 4, 4, 2], [3, 5, 1, 3, 1]],
-         [1, 5, 3, 5, 1, 2, 1, 4])
-
-
-
+    #
+    # count = 0
+    # lenth = 0
+    # while len(keeping_box) != lenth or count == 0:
+    #     for i in range(len(keeping_box)):
+    #         lenth = len(keeping_box)
+    #         if keeping_box[i] == keeping_box[i - 1] and i > 0:
+    #             count += 1
+    #             del keeping_box[i-1:i+1]
+    #             break
+    #
+    # answer = count * 2
+    # print(answer)
 # 보드 : board
 # [[0, 0, 0, 0, 0],
 #  [0, 0, 1, 0, 3],
