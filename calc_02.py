@@ -26,4 +26,3 @@ def calc():
 # ex) + in a True
 
 calc()
-calc()
