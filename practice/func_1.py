@@ -1,8 +1,8 @@
-
 s = "1,3,4,22,2"
 i = 2                       #taget is integer
 
       #string to integer convert
+
 
 def find_num(list_1, pi):
     temp = False
@@ -18,8 +18,6 @@ def chk_dupl(ps, pi):
     if find_num(list_s, pi):
         temp = True
     return temp
-
-
 
 
 r = chk_dupl(s, i)

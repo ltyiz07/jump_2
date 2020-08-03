@@ -1,7 +1,7 @@
 #숫자 "3"들만 '*'로 출력 되도록 함.
 #
 #
-f = open("d:\\test\\gugudan_single3finder.txt", 'w')
+f = open("gugudan_single3finder.txt", 'w')
 
 for i in range(1, 10, 1):
     for j in [2, 3, 4]:
