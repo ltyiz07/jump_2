@@ -24,4 +24,8 @@ for i in range(1, 10, 1):
         f.write(data)
     f.write("\n")
 f.write("\n")
+<<<<<<< HEAD
+=======
+# qorhvmek
+>>>>>>> b2955f0282ff77dbcb8789c7efdb099f956a6a2e
 

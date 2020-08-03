@@ -1,7 +1,11 @@
 #모든 '3'을 '*'으로 출력
 #gugudan 과의 다른점은 gugudan은 단순히 "3"만을 if == 3 으로 확인해 줄력하는 반면
 #gugudan_3은 모든 출력에서 '3'을 모두 검사해 '3'일때 '*' 출력.
+<<<<<<< HEAD
 f = open("d:\\test\\gugudan_3to_star.txt", 'w')
+=======
+f = open("c:\\pyth\\gugudan_3to_star.txt", 'w')
+>>>>>>> b2955f0282ff77dbcb8789c7efdb099f956a6a2e
 data = ''
 for i in range(1, 10, 1):
     for j in [2, 3, 4]:

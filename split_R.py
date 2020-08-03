@@ -6,10 +6,18 @@ count = 0
 words = "20010131Rainy", "179Rai354ny", "21R354yn76"
 
 
+<<<<<<< HEAD
 in_words = ["1", "2", "3", "4", "5", "6", "7"]
 
 for i in range(7):
     in_words[i] = input("press any key: ")
+=======
+in_words = ["1", "2", "3"
+            ]
+
+for i in range(3):
+    in_words[i] = input("%d press any key:" % i)
+>>>>>>> b2955f0282ff77dbcb8789c7efdb099f956a6a2e
 
 R_count = 0
 
