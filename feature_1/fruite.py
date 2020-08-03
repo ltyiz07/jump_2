@@ -71,7 +71,7 @@ if __name__ == "__main__":          # 더 알아보기
         for i in show_data:
             a = show_data[count][0]
             b = show_data[count][1]
-            show = "{0:^10} : {1:>2} \n".format(a, b)
+            show = "{0:<10} : {1:>2} \n".format(a, b)
             f1.write(show)
             count += 1
 
