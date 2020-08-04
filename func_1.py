@@ -23,3 +23,16 @@ def chk_dupl(ps, pi):
 r = chk_dupl(s, i)
 
 print(chk_dupl(s, i))
+
+
+a = 1
+
+def fn():
+    print("#######")
+
+class MyClass:
+    print("$$$$$$$$$$$$$$$$$$$$$$$$")
+
+
+if __name__ == "__main__":
+    print("hello world.")
