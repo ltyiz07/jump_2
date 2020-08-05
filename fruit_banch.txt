@@ -1,0 +1,12 @@
+apple     : 65
+peach     : 20
+mango     : 5 
+banana    : 6 
+grape     : 84
+pineapple : 36
+seed      : 113
+melon     : 91
+tomato    : 55
+watermelon: 3 
+weed      : 2 
+potato    : 100

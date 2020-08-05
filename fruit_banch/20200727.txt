@@ -1,0 +1,2 @@
+BlueWorld TaeGy 07/27
+apple,1,peach,20,apple,10,mango,3,banana,3,grape,10,pineapple,2,seed,6

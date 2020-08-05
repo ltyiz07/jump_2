@@ -1,0 +1,2 @@
+CJ fighter 07/30
+melon,1,tomato,5,banana,1

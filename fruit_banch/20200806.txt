@@ -1,0 +1,2 @@
+super_shop Young
+seed,100,apple,50,grape,49,pineapple,34,tomato,50,potato,100,melon,90,lotus,100

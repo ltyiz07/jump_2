@@ -53,3 +53,9 @@ if __name__ == "__main__":
 
     test.sorting()
     test.writing()
+
+    run = Counter()
+    run.file_finder("fruit_banch")
+    run.file_reader()
+    run.sorting()
+    run.writing()

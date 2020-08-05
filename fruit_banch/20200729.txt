@@ -1,0 +1,2 @@
+shop_1 baby 07/29
+apple,1,seed,7,grape,14,banana,2
