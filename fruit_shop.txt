@@ -1,0 +1,10 @@
+apple     : 15
+peach     : 20
+mango     : 5 
+banana    : 6 
+grape     : 35
+pineapple : 2 
+seed      : 13
+melon     : 1 
+tomato    : 5 
+watermelon: 3 

@@ -11,8 +11,8 @@ for i in range(people):
 
 sampled_list_people = random.sample(list_people, 5)
 
-for i in range(4):
-    print("자동차 당첨({0}등)!! : ".format(5 - i), sampled_list_people[i])
+for i in range(5):
+    print("자동차 당첨({0}등)!! : ".format(6 - i), sampled_list_people[i],  "             계속하려면 enter")
     input()
 
 print("!!빌딩 당첨(1등)!! : ", sampled_list_people[4])
