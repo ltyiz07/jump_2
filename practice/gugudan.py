@@ -70,4 +70,3 @@ for i in range(1, 10, 1):
                 f.write(data)
     f.write("\n")
 f.write("\n")
-
