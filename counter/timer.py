@@ -1,23 +1,32 @@
 import timeit
 start_time = timeit.default_timer()  # 시작 시간 체크
+###################################################
 
-def solution(number, k):
-    count = 0
-    while k != 0:
-        if number[count + 1] > number[count]:
-            number = number[0:count] + number[count + 1:]
-            k -= 1
-            count = 0
-        else:
-            count += 1
-    return number
-print(solution("1231234", 3))
-print(solution("4177252841", 4))
-print(solution("29495098256098", 5))
-print(solution("29495098256098", 5))
-print(solution("29495098256098", 5))
+def perm1(lst):
+    if len(lst) == 0:
+        return []
+    elif len(lst) == 1:
+        return [lst]
+    else:
+        l = []
+        for i in range(len(lst)):
+            x = lst[i]
+            xs = lst[:i] + lst[i + 1:]
+            for p in perm1(xs):
+                l.append([x] + p)
+        return l
 
 
+data = ['2', '0', '1', '4']
+permutations_set = set(())
+
+for p in perm1(data):
+    temp_str = ""
+    for i in p:
+        temp_str += str(i)
+    permutations_set.add(int(temp_str))
+
+###################################################
 end_time = timeit.default_timer()  # 종료 시간 체크
 print('=' * 50)
-print("%f초 걸렸습니다." % (end_time - start_time))
+print("%f micro sec 걸렸습니다." % ((end_time - start_time) * 1000000))

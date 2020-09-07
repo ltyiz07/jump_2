@@ -10,7 +10,3 @@ def solution(prices):
     prices[-1] = 0
 
     return prices
-
-
-print('sol', solution([1, 2, 3, 4, 2, 1]))
-print('ans', [5, 4, 2, 1, 1, 0])

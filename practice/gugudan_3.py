@@ -1,45 +1,12 @@
-# 모든 '3'을 '*'으로 출력
-# gugudan 과의 다른점은 gugudan은 단순히 "3"만을 if == 3 으로 확인해 줄력하는 반면
-# gugudan_3은 모든 출력에서 '3'을 모두 검사해 '3'일때 '*' 출력.
-f = open("c:\\pyth\\gugudan_3to_star.txt", 'w')
+def find_max(a, n):  # 리스트 a의 앞부분 n개 중 최댓값을 구하는 재귀 함수
+    if n == 1:
+        return a[0]
+    max_n_1 = find_max(a, n - 1)  # n - 1개 중 최댓값을 구함
+    if max_n_1 > a[n - 1]:  # n - 1개 중 최댓값과 n - 1번 위치 값을 비
+        return max_n_1
+    else:
+        return a[n - 1]
 
-data = ''
-for i in range(1, 10, 1):
-    for j in [2, 3, 4]:
-        count = 0
-        data = "{0:>2} x {1:>2} = {2:>2}     ".format(j, i, j * i)
-        for k in data:
-            if k == '3':
-                data = data[:count] + '*' + data[count + 1:]
-            count = count + 1
-        f.write(data)
-    f.write("\n")
-f.write("\n")
-f.write("-" * 50)
-f.write("\n")
-print(len(data))
-for i in range(1, 10, 1):
-    for j in [5, 6, 7]:
-        count = 0
-        data = "{0:>2} x {1:>2} = {2:>2}     ".format(j, i, j * i)
-        for k in data:
-            if k == '3':
-                data = data[:count] + '*' + data[count + 1:]
-            count = count + 1
-        f.write(data)
-    f.write("\n")
-f.write("\n")
-f.write("-" * 50)
-f.write("\n")
 
-for i in range(1, 10, 1):
-    for j in [8, 9]:
-        count = 0
-        data = "{0:>2} x {1:>2} = {2:>2}     ".format(j, i, j * i)
-        for k in data:
-            if k == '3':
-                data = data[:count] + '*' + data[count + 1:]
-            count = count + 1
-        f.write(data)
-    f.write("\n")
-f.write("\n")
+v = [17, 92, 18, 33, 58, 7, 33, 42]
+print(find_max(v, len(v))) 

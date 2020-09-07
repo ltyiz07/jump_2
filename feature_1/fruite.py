@@ -43,7 +43,6 @@ def adding(sorted_data):
 
 
 def file_finder(directory):
-    import os
     folder_list = []
     with os.scandir(directory) as folders:
         for folder in folders:

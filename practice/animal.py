@@ -22,4 +22,5 @@ class Lion:
 
 
 ellen = Tiger()
-Amike = Tiger()
+mike = Tiger()
+ellen.bark()
