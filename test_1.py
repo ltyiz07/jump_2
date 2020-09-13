@@ -1,8 +1,9 @@
-a = ['123', '23', '14', '99', '999']
-a.sort()
-print(a)
+global_var = 51
+
+def myfunc():
+    global_var = global_var + 1
+    print(global_var)
 
 
-b = [123, 214, 51, 15, 0, 99]
-b.sort()
-print(b)
+myfunc()
+print(global_var)

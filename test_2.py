@@ -1,22 +1,25 @@
-def perm1(lst):
-    if len(lst) == 0:
-        return []
-    elif len(lst) == 1:
-        return [lst]
-    else:
-        l = []
-        for i in range(len(lst)):
-            x = lst[i]
-            xs = lst[:i] + lst[i + 1:]
-            for p in perm1(xs):
-                l.append([x] + p)
-        return l
+from itertools import permutations
+
+a = ['a', 'b', 'c', 'e']
+# b = permutations(a, 2)
+# for i in b:
+#     print(i)
 
 
-data = [0, 1, 2]
+c = set()
+c |= {'f', 'e'}
 
-count = 0
-for p in perm1(data):
-    print(p)
-    count += 1
-print(count)
+print(c)
+
+for i inmap(c, a)
+
+from itertools import permutations
+def solution(n):
+    a = set()
+    for i in range(len(n)):
+        a |= set(map(int, map("".join, permutations(list(n), i + 1))))
+    a -= set(range(0, 2))
+    for i in range(2, int(max(a) ** 0.5) + 1):
+        a -= set(range(i * 2, max(a) + 1, i))
+    return len(a)
+
