@@ -1,9 +1,3 @@
-s = "1,3,4,22,2"
-i = 2                       #taget is integer
-
-      #string to integer convert
-
-
 def find_num(list_1, pi):
     temp = False
     for i in list_1:
@@ -20,21 +14,26 @@ def chk_dupl(ps, pi):
     return temp
 
 
-r = chk_dupl(s, i)
+
 
 if __name__ == "__main__":
+    s = "1,3,4,22,2"
+    i = 2
 
-    print(chk_dupl(s, i))
-
-
-    a = 1
+    r = chk_dupl(s, i)
+    print(r)
 
     def fn():
         print("#######")
 
     class MyClass:
-        print("$$$$$$$$$$$$$$$$$$$$$$$$")
+        def __init__(self):
+            print("$$$$$$$$$$$$$$$$$$$$$$$$")
 
+    a = fn()
 
-    if __name__ == "__main__":
-        print("hello world.")
+    b = MyClass
+    b()
+
+    c = MyClass()
+    # c()           # TypeError: "MyClass" object is not callable
