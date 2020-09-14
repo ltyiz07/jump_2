@@ -13,4 +13,4 @@ def hanoi(n, from_pos, to_pos, aux_pos):
     hanoi(n - 1, aux_pos, to_pos, from_pos)
 
 
-hanoi(3, 1, 3, 2)
+hanoi(7, 1, 3, 2)

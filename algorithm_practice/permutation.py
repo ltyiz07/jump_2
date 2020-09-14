@@ -1,3 +1,4 @@
+# from itertools import permutations
 def perm1(lst):
     if len(lst) == 0:
         return []

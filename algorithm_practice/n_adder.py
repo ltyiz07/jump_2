@@ -6,4 +6,3 @@ def sum_n(n):
     return a
 
 print(sum_n(100))
-
