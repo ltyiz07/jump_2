@@ -1,32 +1,14 @@
 import timeit
-start_time = timeit.default_timer()  # 시작 시간 체크
-###################################################
-
-def perm1(lst):
-    if len(lst) == 0:
-        return []
-    elif len(lst) == 1:
-        return [lst]
-    else:
-        l = []
-        for i in range(len(lst)):
-            x = lst[i]
-            xs = lst[:i] + lst[i + 1:]
-            for p in perm1(xs):
-                l.append([x] + p)
-        return l
 
 
-data = ['2', '0', '1', '4']
-permutations_set = set(())
+class Timer:
+    def __init__(self):
+        self.start_time = 0
+        self.finish_time = 0
 
-for p in perm1(data):
-    temp_str = ""
-    for i in p:
-        temp_str += str(i)
-    permutations_set.add(int(temp_str))
+    def start(self):
+        self.start_time = timeit.default_timer()
 
-###################################################
-end_time = timeit.default_timer()  # 종료 시간 체크
-print('=' * 50)
-print("%f micro sec 걸렸습니다." % ((end_time - start_time) * 1000000))
+    def finish(self):
+        self.finish_time = timeit.default_timer()
+        print("%f micro sec 걸렸습니다." % ((self.finish_time - self.start_time) * 1000000))

@@ -1,3 +1,5 @@
+from counter import deco_timer
+
 def scaling(lst=[]):
     if len(lst) == 0:
         return []
@@ -16,3 +18,8 @@ def scaling(lst=[]):
 
 a = ['a', 'b', 'c', 'd']
 print(scaling(a))
+
+from itertools import permutations
+
+for i in permutations(a):
+    print(i)
