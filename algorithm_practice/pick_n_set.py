@@ -25,8 +25,9 @@ def pick_all(lst=[] , n=0):
     return temp_lst
 
 
-a = 'ab'
+a = 'abcd'
 n = 2
-print(pick_all(a))
+# print(pick_all(a))
 
-# pick(a, 2)
+print(pick_n(a, 2))
+
