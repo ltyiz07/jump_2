@@ -1,5 +1,3 @@
-from counter import deco_timer
-
 def scaling(lst=[]):
     if len(lst) == 0:
         return []

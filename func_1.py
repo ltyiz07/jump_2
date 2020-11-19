@@ -16,7 +16,7 @@ def chk_dupl(ps, pi):
 
 
 
-if __name__ == "__main__":mmat
+if __name__ == "__main__":
     s = "1,3,4,22,2"
     i = 2
 

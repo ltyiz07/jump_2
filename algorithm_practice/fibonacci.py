@@ -3,4 +3,4 @@ def fibo(n):
         return 0
     return n + fibo(n-1)
 
-print(fibo(6))
+print(fibo(10))
