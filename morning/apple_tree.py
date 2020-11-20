@@ -34,8 +34,8 @@ def  gen_n_matrix(n):
     return [[random.randint(1, n * n) for i in range(n)] for j in range(n)]
 
 if __name__ == "__main__":
-    print(apple_tree(make_list("apple_tree_1.txt")))
-    print(apple_tree(make_list("apple_tree_2.txt")))
+    print(apple_tree(make_list("example_files/apple_tree_1.txt")))
+    print(apple_tree(make_list("example_files/apple_tree_2.txt")))
 
     for i in gen_n_matrix(3):
         print(i)

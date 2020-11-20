@@ -23,5 +23,5 @@ def end_sort(lst):
 
 
 if __name__ == "__main__":
-    print(get_times("회의실in1.txt"))
-    print(get_times("회의실in2.txt"))
+    print(get_times("example_files/회의실in1.txt"))
+    print(get_times("example_files/회의실in2.txt"))

@@ -32,5 +32,5 @@ def mount(data):
     return count
 
 
-print(mount(get_data("봉우리in1.txt")))
-print(mount(get_data("봉우리in2.txt")))
+print(mount(get_data("example_files/봉우리in1.txt")))
+print(mount(get_data("example_files/봉우리in2.txt")))

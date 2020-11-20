@@ -20,5 +20,5 @@ def digit_sum(file_name):
 
 
 
-print(digit_sum("자릿수합input1.txt"))
-print(digit_sum("자릿수합input2.txt"))
+print(digit_sum("example_files/자릿수합input1.txt"))
+print(digit_sum("example_files/자릿수합input2.txt"))
