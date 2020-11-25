@@ -2,17 +2,17 @@ def solution(a):
     answer = -1
     row = len(a)
     col = len(a[0])
-    row_ones = [0 for _ in range(col)]
-    print(row_ones)
+    zeros_row = [0 for _ in range(col)]
+    print(zeros_row)
 
     for n, i in enumerate(a):
         for m, j in enumerate(i):
             if j == 1:
-                row_ones[m] += 1
-    print(row_ones)
+                zeros_row[m] += 1
+    print(zeros_row)
 
     print(row, col)
-    print(all_odds(row, row_ones))
+    print(all_odds(row, zeros_row))
     print('*' * 50)
     return answer
 
