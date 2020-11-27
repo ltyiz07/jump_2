@@ -8,30 +8,28 @@ def solution(a):
     count = 0
     row = len(a)
     col = len(a[0])
+    if col == 1:
+        return 0
     one_count = np.zeros(col, dtype=int)
     for l in a:
         for j, m in enumerate(l):
             if m == 1:
                 one_count[j] += 1
-    print("one_count: ", one_count)
-
+    one_count.sort()
+    if col == 2 and one_count[0] != one_count[1]:
+        return 0
     all_ = []
     comb_lst = []
     for o in one_count:
         comb_lst.append(comb(row, o))
     large = max(comb_lst)
     large_index = comb_lst.index(max(comb_lst))
-    print(large, "   ", large_index)
-
     for i, o in enumerate(one_count):
         if i == large_index:
             all_.append((tuple(i for i in range(one_count[large_index])),))
             continue
         all_.append(tuple(combinations(range(row), o)))
-    print(all_)
-
     all_all = tuple(product(*all_))
-    print(all_all)
     for l in all_all:
         temp_set = set()
         for m in l:
@@ -52,3 +50,4 @@ if __name__ == "__main__":
     # solution([[1,0,0],[1,0,0]])
     print('*' * 50)
     print(solution([[1,0,0,1,1],[0,0,0,0,0],[1,1,0,0,0],[0,0,0,0,1]]))
+    print(solution([[0,0,0,0,0],[0,0,0,0,0]]))
