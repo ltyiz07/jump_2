@@ -17,7 +17,8 @@ print(b)
 
 #그러다면 n 개의 수를 채우는데 n번의 랜덤 기회만 준다면... 몇개의 수가 채워질까
 c = 0
-for i in range(10):
-    c = c + 1 - (0.1 * i)
+for i in range(1000):
+    c = c + 1 - (1 / 1000 * i)
 
 print(round(c, 4))
+
