@@ -1,9 +1,10 @@
 def reverse(n):
-    answer = ""
-    b = reversed(list(str(n)))
-    for i in b:
-        answer += i
-    return int(answer)
+    # answer = ""
+    # b = reversed(list(str(n)))
+    # for i in b:
+    #     answer += i
+    # return int(answer)
+    return int(str(n)[::-1])
 
 
 def is_prime(m):
@@ -12,7 +13,7 @@ def is_prime(m):
     elif m == 2:
         return True
 
-    for i in range(2, m):
+    for i in range(2, m // 2):
         if m % i == 0:
             return False
     else:
