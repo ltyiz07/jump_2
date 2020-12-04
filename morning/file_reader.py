@@ -14,6 +14,11 @@ def read_lines(file_name):
     return text
 
 
+def print_2d(lst):
+    for i in lst:
+        print(i)
+
+
 if __name__ == "__main__":
     print(read_lines("example_files\\침몰타이타닉1.txt"))
     print(chr(10))
