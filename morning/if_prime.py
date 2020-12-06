@@ -20,12 +20,24 @@ def is_prime_num(num, lst=[]):
 #             return False
 #     return True
 
+def get_prime(num):
+    answer = []
+
+    def divider(n):
+        for i in range(2, n):
+            if n % i == 0:
+                answer.append(i)
+                print(i)
+                return divider(int(n / i))
+        answer.append(n)
+        return
+    divider(num)
+    return answer
+
 
 if __name__ == "__main__":
-    a = []
-    print(is_prime_num(5541566351), a)
-
+    # print(is_prime_num(5541566351), a)
+    # print("*" * 50)
+    # print(is_prime_num(20), b)
     print("*" * 50)
-
-    b = []
-    print(is_prime_num(20), b)
+    print(get_prime(51))
