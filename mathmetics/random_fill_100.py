@@ -42,7 +42,6 @@ def all_shot(n):
     while len(target) != n:
         r = int(random() * n) + 1
         target.add(r)
-        count += 1
     return count
 
 
@@ -66,15 +65,17 @@ if __name__ == "__main__":
     winsound.Beep(200, 300)
 
     hit_lst = []
-    for hit in range(10000):
-        hit_lst.append(one_shot(10000))
+    for hit in range(100000):
+        hit_lst.append(one_shot(1000))
     print(hit_lst)
     mount_graph(hit_lst)
+    winsound.Beep(280, 300)
+    print(one_shot(1000))
 
 
     # shot_lst = []
     # for hit in range(10000):
     #     shot_lst.append(all_shot(10))
-    # print(average(shot_lst))
+    # print(average(shot_lst))/
     winsound.Beep(200, 300)
     winsound.Beep(280, 300)
