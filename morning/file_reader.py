@@ -2,7 +2,7 @@ def read_lines(file_name):
     """
 
     :param file_name: 파일 이름.
-    :return: 각죽을 리스트에 붙여서 리턴
+    :return: 각줄을 리스트에 붙여서 리턴
     """
     text = []
     with open(file_name, 'r', encoding="utf-8") as f:
@@ -11,7 +11,7 @@ def read_lines(file_name):
         while temp_text != "":
             temp_text = f.readline().strip()
             text.append(temp_text)
-    return text
+    return text[:-1]
 
 
 def print_2d(lst):
