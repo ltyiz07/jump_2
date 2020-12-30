@@ -2,8 +2,10 @@
 # 입력되는 문자열의 특징은 각각이 ','로 나뉘어 있다는 것인데
 # 리스트 함수중 split을 사용하면된다
 # 위의 데이터는 일단 연습이니 코드안에서 정의해준다
-source ="""apple,2,grape,1,pineapple,1,apple,1,tomato,2,grape,1,
-pineapple,2,apple,1,grape,1"""    # 초기의 데어터
+source ="""\
+apple,2,grape,1,pineapple,1,apple,1,\
+tomato,2,grape,1,pineapple,2,apple,1,grape,1\
+"""    # 초기의 데어터
 
 
 list_s = source.split(',')
