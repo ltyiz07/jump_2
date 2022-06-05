@@ -3,4 +3,5 @@ def fibo(n):
         return 0
     return n + fibo(n-1)
 
-print(fibo(6))
+if __name__ == "__main__":
+    print(fibo(6))

@@ -15,11 +15,13 @@ def grid_max_added(lst):
         for h in h_l:
             temp_max += h
         max_lst.append(temp_max)
+    print(max_lst)
     for v in range(n):
         temp_max = 0
         for k in range(n):
             temp_max += lst[k][v]
         max_lst.append(temp_max)
+  d
     temp_max = 0
     for v in range(n):
         temp_max += lst[v][v]
@@ -56,6 +58,6 @@ def grid_max_added1(lst):
 
 if __name__ == "__main__":
     print(grid_max_added(file_reader("example_files\\격자판최대합1.txt")))
-    print(grid_max_added(file_reader("example_files\\격자판최대합2.txt")))
-    print(grid_max_added1(file_reader("example_files\\격자판최대합1.txt")))
-    print(grid_max_added1(file_reader("example_files\\격자판최대합2.txt")))
+    # print(grid_max_added(file_reader("example_files\\격자판최대합2.txt")))
+    # print(grid_max_added1(file_reader("example_files\\격자판최대합1.txt")))
+    # print(grid_max_added1(file_reader("example_files\\격자판최대합2.txt")))
