@@ -21,6 +21,43 @@ def get_cost(f, t):
 def solution(numbers):
 
     # Key: 0 is left 1 is right
+    # Value: (key1, key2, cost)
+    table = {("6", "4"): 0}
+
+    for n in numbers:
+        table_copy = table.copy()
+        table = dict()
+        for (key2, key1), cost in table_copy.items():
+            if (key2 == n) or (key1 == n):
+                k = (key2, key1)
+                if k in table:
+                    table[k] = table[k] if table[k] <= cost + 1 else cost + 1
+                else:
+                    table[k] = cost + 1
+            else:
+                added_cost = get_cost(key2, n)
+                k = (n, key1) if n > key1 else (key1, n)
+                if k in table:
+                    table[k] = table[k] if table[k] <= cost + added_cost else cost + added_cost
+                else:
+                    table[k] = cost + added_cost
+
+                added_cost = get_cost(key1, n)
+                k = (key2, n) if key2 > n else (n, key2)
+                if k in table:
+                    table[k] = table[k] if table[k] <= cost + added_cost else cost + added_cost
+                else:
+                    table[k] = cost + added_cost
+
+        # pprint(table)
+        # print()
+
+    return min(table.values())
+
+
+def solution_1(numbers):
+
+    # Key: 0 is left 1 is right
     # Value: (left, right, cost)
     table = {"": ("4", "6", 0)}
 
@@ -38,8 +75,8 @@ def solution(numbers):
                 table[k + "0"] = (n, right, cost + added_cost)
                 added_cost = get_cost(right, n)
                 table[k + "1"] = (left, n, cost + added_cost)
-        pprint(table)
-        print()
+        # pprint(table)
+        # print()
     return min(table.values(), key=lambda x: x[2])[2]
 
 
@@ -49,5 +86,7 @@ def pprint(target):
 
 if __name__ == "__main__":
     # sol = solution("1756")    # result: 10
-    sol = solution("402031756")
-    print(sol)
+    test_input = "251529"
+    sol = solution(test_input)
+    sol_1 = solution_1(test_input)
+    print(f"{sol}, {sol_1}, {sol == sol_1}")
